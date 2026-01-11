@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Infinity Ofertas</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<img src="img/logo.png" class="logo">
+<div class="lang">
+<button onclick="setLang('pt')">PT</button>
+<button onclick="setLang('en')">EN</button>
+</div>
+</header>
+
+<section class="controls">
+<input type="text" id="search" placeholder="Buscar produto..." onkeyup="render()">
+<select id="order" onchange="render()">
+<option value="">Ordenar preço</option>
+<option value="asc">Menor → Maior</option>
+<option value="desc">Maior → Menor</option>
+</select>
+</section>
+
+<section id="produtos"></section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
