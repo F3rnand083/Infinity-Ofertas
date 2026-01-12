@@ -1,27 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt">
+
+<!doctype html>
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Infinity Ofertas</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loja - Catalogo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Catalogo de produtos atualizado via CSV" />
 </head>
 <body>
-<header>
-<img src="img/logo.png" class="logo">
-<div class="lang">
-<button onclick="setLang('pt')">PT</button>
-<button onclick="setLang('en')">EN</button>
-</div>
-</header>
+  <header class="topo">
+    
+    <input id="busca" type="search" placeholder="Buscar produto..." />
+    <select id="filtroCategoria">
+      <option value="">Todas as categorias</option>
+    </select>
+  </header>
 
-<section class="controls">
-<input type="text" id="search" placeholder="Buscar produto..." onkeyup="render()">
-<select id="order" onchange="render()">
-</select>
-</section>
+  <main>
+    <section id="grid" class="grid"></section>
+  </main>
 
-<section id="produtos"></section>
+  <template id="tpl-card">
+    <article class="card">
+      <img class="card-img" src="" alt="" loading="lazy" />
+      <div class="card-body">
+        <h2 class="card-title"></h2>
+        <p class="card-desc"></p>
+        <div class="card-footer">
+          <a class="card-buy" target="_blank" rel="noopener">Comprar</a>
+        </div>
+      </div>
+    </article>
+  </template>
 
-<script src="js/script.js"></script>
+  <footer class="rodape">&copy; <span id="ano"></span> Minha Loja</footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
