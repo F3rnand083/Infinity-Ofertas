@@ -20,7 +20,7 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text);
 .site-header--light { background: var(--header-bg); color: var(--header-text); border-bottom: 1px solid rgba(0,0,0,.06); }
 
 .brand { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; text-decoration: none; color: inherit; }
-.brand-logo { height: 100px; width: auto; display: block; object-fit: contain; image-rendering: -webkit-optimize-contrast; }
+.brand-logo { height: 200px; width: auto; display: block; object-fit: contain; image-rendering: -webkit-optimize-contrast; }
 .site-subtitle { margin-top: .35rem; color: var(--header-text); opacity: .8; }
 
 .visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }
